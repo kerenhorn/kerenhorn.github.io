@@ -10,12 +10,16 @@
       font-family: 'EB Garamond', serif;
       margin: 0;
       padding: 0;
-      background-image: url('UMassBoston.jpg');
-      background-size: contain;
-      background-position: top;
-      background-repeat: no-repeat;
       background-color: #f5f5f5;
       color: #222;
+    }
+
+    .header {
+      background-image: url('UMassBoston.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      position: relative;
     }
 
     nav {
@@ -36,26 +40,35 @@
       font-size: 1.1rem;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 5rem auto;
-      background-color: rgba(255, 255, 255, 0.95);
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 3rem auto;
       padding: 2rem;
-      text-align: center;
+      background-color: rgba(255, 255, 255, 0.95);
+    }
+
+    .profile-pic {
+      width: 240px;
+      height: 240px;
+      border-radius: 15px;
+      object-fit: cover;
+      border: 3px solid #ccc;
+      margin: 1rem;
+    }
+
+    .text-section {
+      max-width: 600px;
+      margin: 1rem;
+      text-align: left;
     }
 
     .name {
       font-size: 2.5rem;
       font-weight: bold;
-      margin-bottom: 2rem;
-    }
-
-    .profile-pic {
-      width: 220px;
-      height: 220px;
-      border-radius: 20px;
-      object-fit: cover;
-      border: 3px solid #ccc;
       margin-bottom: 1.5rem;
     }
 
@@ -67,6 +80,8 @@
 </head>
 <body>
 
+  <div class="header"></div>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="cv.html">CV</a>
@@ -75,14 +90,16 @@
     <a href="media.html">Media</a>
   </nav>
 
-  <div class="container">
-    <div class="name">Keren Horn</div>
+  <div class="content">
     <img src="Horn_Headshot.JPG" alt="Keren Horn" class="profile-pic">
-    <p class="bio">
-      I am an Associate Professor of Economics at the University of Massachusetts Boston.
-      My research focuses on urban economics, housing policy, and neighborhood change.
-      I am passionate about using empirical tools to inform equitable and effective public policy.
-    </p>
+    <div class="text-section">
+      <div class="name">Keren Horn</div>
+      <p class="bio">
+        I am an Associate Professor of Economics at the University of Massachusetts Boston.
+        My research focuses on urban economics, housing policy, and neighborhood change.
+        I am passionate about using empirical tools to inform equitable and effective public policy.
+      </p>
+    </div>
   </div>
 
 </body>
