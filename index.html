@@ -23,22 +23,22 @@
       position: relative;
     }
 
-    nav {
+    .header nav {
       display: flex;
       justify-content: center;
       gap: 40px;
       background-color: rgba(255, 255, 255, 0.95);
       padding: 1.2rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
     }
 
     nav a {
       text-decoration: none;
       font-weight: bold;
       color: #333;
-      font-size: 1.35rem;
+      font-size: 1.2rem;
     }
 
     .content {
@@ -68,19 +68,19 @@
     }
 
     .name {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: bold;
       margin-bottom: 1.5rem;
     }
 
     .bio {
-      font-size: 1.2rem;
-      line-height: 1.85;
+      font-size: 1.1rem;
+      line-height: 1.75;
     }
 
     .social {
       margin-top: 1.5rem;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .social a {
@@ -93,19 +93,49 @@
       vertical-align: middle;
       margin-right: 6px;
     }
+
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .profile-pic {
+        width: 90%;
+        height: auto;
+      }
+
+      .text-section {
+        max-width: 100%;
+        margin: 1rem 0;
+        text-align: center;
+      }
+
+      .name {
+        font-size: 1.6rem;
+      }
+
+      .bio, .social {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <div class="header"></div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="cv.html">CV</a>
-    <a href="research.html">Research</a>
-    <a href="teaching.html">Teaching</a>
-    <a href="media.html">Media</a>
-  </nav>
+  <div class="header">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="cv.html">CV</a>
+      <a href="research.html">Research</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="media.html">Media</a>
+    </nav>
+  </div>
 
   <div class="content">
     <img src="Horn_AdamSmith.jpg" alt="Keren Horn" class="profile-pic">
