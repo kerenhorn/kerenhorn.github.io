@@ -10,35 +10,32 @@
       font-family: 'EB Garamond', serif;
       margin: 0;
       padding: 0;
-      background-color: #f5f5f5;
+      background-color: white;
       color: #222;
     }
 
-    .header {
-      background-image: url('UMassBoston_cropped6.JPG');
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center top;
-      height: 200px;
-      position: relative;
+    .name-header {
+      text-align: center;
+      border-top: 2px solid #000;
+      border-bottom: 2px solid #000;
+      padding: 1rem 0;
+      font-size: 2rem;
+      font-weight: bold;
     }
 
-    .header nav {
+    nav {
       display: flex;
       justify-content: center;
       gap: 40px;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 1.2rem 0;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
+      padding: 1rem 0;
+      border-bottom: 1px solid #ccc;
     }
 
     nav a {
       text-decoration: none;
       font-weight: bold;
       color: #333;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
     }
 
     .content {
@@ -46,46 +43,34 @@
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 3rem auto;
       padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.95);
     }
 
     .profile-pic {
-      width: 280px;
-      height: 420px;
+      width: 320px;
+      height: auto;
       border-radius: 15px;
       object-fit: cover;
-      border: none;
       margin: 1rem;
     }
 
     .text-section {
-      max-width: 600px;
+      max-width: 700px;
       margin: 1rem;
-      text-align: left;
-    }
-
-    .name {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 1.5rem;
-    }
-
-    .bio {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       line-height: 1.75;
     }
 
-    .social {
-      margin-top: 1.5rem;
-      font-size: 1.1rem;
+    .bio {
+      margin-bottom: 1.5rem;
     }
 
     .social a {
       color: #1a0dab;
       text-decoration: none;
+      font-size: 1rem;
     }
 
     .social img {
@@ -102,50 +87,43 @@
 
       .profile-pic {
         width: 90%;
-        height: auto;
       }
 
       .text-section {
         max-width: 100%;
-        margin: 1rem 0;
         text-align: center;
       }
 
-      .name {
-        font-size: 1.6rem;
-      }
-
-      .bio, .social {
-        font-size: 1rem;
+      nav {
+        flex-direction: column;
+        gap: 1rem;
       }
 
       nav a {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="header">
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="cv.html">CV</a>
-      <a href="research.html">Research</a>
-      <a href="teaching.html">Teaching</a>
-      <a href="media.html">Media</a>
-    </nav>
-  </div>
+  <div class="name-header">Keren Horn</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="cv.html">CV</a>
+    <a href="research.html">Research</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="media.html">Media</a>
+  </nav>
 
   <div class="content">
     <img src="Horn_AdamSmith.jpg" alt="Keren Horn" class="profile-pic">
     <div class="text-section">
-      <div class="name">Keren Horn</div>
       <p class="bio">
         Welcome! I am an Associate Professor of Economics at the University of Massachusetts Boston. 
-        My research explores how the places where we live and work shape our labor market outcomes. 
-        I work at the intersection of urban and labor economics, and I am passionate about using 
-        empirical tools to inform equitable and effective public policy.
+        I work at the intersection of urban and labor economics, exploring how our surroundings shape 
+        our lives and livelihoods. I am passionate about using empirical tools to inform equitable 
+        and effective public policy.
       </p>
       <div class="social">
         <a href="https://bsky.app/profile/kerenhorn.bsky.social" target="_blank">
